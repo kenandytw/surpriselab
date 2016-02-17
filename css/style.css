@@ -479,3 +479,9 @@ body{
     border-radius:3px;
     font-size: 12px;
 }
+
+.gogo-btn {
+    cursor: pointer;
+    color: #ff6d4c;
+    font-weight: bold;
+}

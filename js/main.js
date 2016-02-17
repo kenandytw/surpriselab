@@ -7,7 +7,8 @@ window.onload = function() {
 
 var i = 0,
     x = 0,
-    lastScrollTop = 0;
+    lastScrollTop = 0,
+    myState = 0;
 
 //scroll up or down
 //$(window).scroll(function(event){
@@ -112,10 +113,42 @@ function floatReset(){
 
 
 $(document).ready(function(){
-    $('.go-next').bind('click',function(){
-        var wheretoGo =( "#cut"+ $(this).attr('rel')),
-            $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body'),
-            addRel = parseInt( $(this).attr('rel') )+ 1;
+    $('.gogo-btn').bind('click',function(){
+       
+        var menuState = $(this).attr('menuState');
+        
+        if(menuState==1){
+            myState = 1
+        }
+        
+        if(menuState==2){
+            myState = 2
+        }
+        
+        if(menuState==3){
+            myState = 3
+        }
+        
+        if(menuState==4){
+            myState = 4;
+            $('#countdown').fadeIn(700);
+            $('#subscribe').fadeOut(0);
+        }
+        
+        if(menuState==5){
+            myState = 4;
+            $('#countdown').fadeOut(700);
+            $('#subscribe').delay(710).fadeIn(700);
+        }
+        
+        if(menuState==undefined){
+            myState == myState;
+            myState ++;
+        }
+        
+        var wheretoGo =( "#cut"+ myState),
+            $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        
         $body.animate({
             scrollTop: $(wheretoGo).offset().top
         }, 700);
@@ -131,18 +164,23 @@ $(document).ready(function(){
                     "top":"0px",
                     "opacity":"1"
                 });
-            }
-        }
+            };
+        };
+        
+        if(wheretoGo=="#cut2"){
+            $('.landing-container').css("background","#f2f2f2");  
+        };
+        
         if(wheretoGo=="#cut3"){
+            $('.landing-container').css("background","#f2f2f2");
             setTimeout('dollToggle('+0+')',500); 
-        }
+        };
         
         if(wheretoGo=="#cut4"){
-
             setTimeout(boxbox,650);
-            $(this).fadeOut(700);
-        }
-        $(this).attr('rel',addRel)
+            $('.go-next').fadeOut(700);
+        };
+        
     });
 
     // countdown scribe toggle
