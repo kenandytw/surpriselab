@@ -39,9 +39,19 @@ function dotRotate(){
 }
 
 // main function
-$(document).ready(function(){
+
+$(document).imagesLoaded(function(){
+
     var w = $(window).width(),
-        h = $('.landing-container').innerHeight();
+        h = $('.landing-container').innerHeight(),
+        landingBoxH = $('.landing-box').height(),
+        landingPadding = ( (h - landingBoxH) / 2 ) + "px",
+        paddingH = (h * 0.225)+"px";
+   
+    
+    $('.landing-box').css('padding-top',landingPadding);
+    $('.cut-wrapper').css('padding-top',paddingH);
+    
     
     $('.landing-box,.cut-wrapper,.cut-2-wrapper').css("height",(h+"px"));
     //讓dot與星球轉
@@ -154,33 +164,21 @@ $(document).ready(function(){
         }, 700);
         // 如果是cut1則跑
         if(wheretoGo=="#cut1"){
-            $('.landing-container').css("background","#f2f2f2");
             $('.float-items , .go-next').stop().fadeOut(300);
             $('.top-nav,.pink-btn').delay(300).fadeIn(700);
-           setTimeout(slowMotion,700);
-            
-            function slowMotion(){
-                $('.cut-1-img').css({
-                    "top":"0px",
-                    "opacity":"1"
-                });
-            };
-        };
-        
-        if(wheretoGo=="#cut2"){
-            $('.landing-container').css("background","#f2f2f2");  
-        };
-        
-        if(wheretoGo=="#cut3"){
-            $('.landing-container').css("background","#f2f2f2");
-            setTimeout('dollToggle('+0+')',500); 
-        };
-        
-        if(wheretoGo=="#cut4"){
-            setTimeout(boxbox,650);
+            $('.cut-content').delay(550).fadeIn(1350);
+            setTimeout(boxbox,1350);
+            $('.goSubscribe-container').delay(3050).fadeIn(700);
             $('.go-next').fadeOut(700);
         };
         
+        
+    });
+    
+    $('.goSubscribe-btn').click(function(){
+        $('.cut-content').css('opacity','0');
+        $(this).fadeOut(700);
+       boxContent(); 
     });
 
     // countdown scribe toggle
@@ -207,14 +205,14 @@ function dollToggle(par){
 
 function boxbox(){
     $('.box-box').addClass('box-box-position');
-    $('.landing-container').css("background","#000000");
-    setTimeout(boxContent,1500);
+    
 }
 
 function boxContent(){
     $('.left-box').addClass("rotate-left");
     $('.right-box').addClass("rotate-right");
     $('.subscribe-container').css('opacity',1);
+    $('.box-box-position').css('top','0px');
     setTimeout(light,1000);
 }
 

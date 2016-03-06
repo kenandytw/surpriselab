@@ -195,7 +195,12 @@ body{
 .cut-content {
     line-height: 1.75em;
     letter-spacing: 2px;
-    
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    display: none;
+    z-index: 2;
+    position: relative;
 }
 
 .cut-1-img {
@@ -308,6 +313,7 @@ body{
 }
 .box-box {
     position: relative;
+    z-index: 1;
     top: -700px;
     transition: top 1.6s;
 }
@@ -376,7 +382,7 @@ body{
 }
 
 .box-box-position {
-    top: 100px;
+    top: 45px;
 }
 
 .subscribe-container {
@@ -404,6 +410,7 @@ body{
 }
 
 .free-experience {
+    margin-top: 10px;    
     background: #ff6d4c;
     color: #fff;
     font-size: 14px;
@@ -450,15 +457,28 @@ body{
     padding: 5px 10px 5px 0px;
 }
 
+.text > h4{
+    font-size: 18px;
+    line-height: 1.5em;
+    margin-bottom: 0px;
+}
+
+
+.text > h1{
+    font-size: 18px;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+}
+
 .input-box{
     width: 300px;
-    font-size: 14px;
+    font-size: 16px;
     padding: 5px;
     border: solid 1px #eee;
 }
 
 .input-box:focus{
-    border: solid 1px #333;
+    border: solid 2px #555;
     padding: 5px;
 }
 
@@ -484,4 +504,27 @@ body{
     cursor: pointer;
     color: #ff6d4c;
     font-weight: bold;
+}
+
+.goSubscribe-container {
+    position: absolute;
+    left: 0px;
+    top: 165px;
+    width: 100%;
+    min-height: 1px;
+    text-align: center;
+    z-index: 10;
+}
+
+.goSubscribe-btn {
+    display: table;
+    margin: 0 auto;
+    color: #fff;
+    border: solid 2px;
+    padding: 7px 20px;
+    letter-spacing: 2px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
 }
