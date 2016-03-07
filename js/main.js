@@ -42,6 +42,7 @@ function dotRotate(){
 
 $(document).imagesLoaded(function(){
 
+    
     var w = $(window).width(),
         h = $('.landing-container').innerHeight(),
         landingBoxH = $('.landing-box').height(),
@@ -63,15 +64,19 @@ $(document).imagesLoaded(function(){
         e.stopPropagation();
         return false;
     })
-
-    // Afu function test
-    function test(par){
-        console.log(par); // 印出
-        par++; // 累加數值
-        if(par>3) return false;   // 跳脫點
-        setTimeout('test('+par+')',1000);  // 遞迴
-    }
-    setTimeout('test('+1+')',1000);   // 進入點
+    
+    //lock spcae
+    
+    $(document).on({
+        keydown: function(e) {
+            if (e.which === 32)
+                return false;
+        },
+        change: function() {
+            this.value = this.value.replace(/\s/g, "");
+        }
+    });
+  
     
     //控制桌機才跑landing動畫
     if (w>776){
@@ -186,7 +191,13 @@ $(document).ready(function(){
     $('.free-experience').click(function(){
         $('#countdown').fadeOut(700);
         $('#subscribe').delay(710).fadeIn(700);
-    })
+        $('.footer').delay(1410).fadeIn(700);
+    });
+    
+    $('.lightbox-cancel,.checked').click(function(){
+       $('.lightbox').fadeToggle(700); 
+        $('body').toggleClass('unscroll');
+    });
 
 
 });
@@ -222,6 +233,10 @@ function light(){
 }
 
 function pig(){
-    $('.subscribe-container').css('bottom','0px');
+    $('.subscribe-container').css('bottom','-15px');
 }
+
+
+// scroll lock
+
 
