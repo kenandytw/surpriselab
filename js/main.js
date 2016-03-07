@@ -220,7 +220,7 @@ function boxbox(){
 }
 
 function boxContent(){
-    $('.left-box').addClass("rotate-left");
+    $('.left-box').addClass("rotate-left"); 
     $('.right-box').addClass("rotate-right");
     $('.subscribe-container').css('opacity',1);
     $('.box-box-position').css('top','0px');
