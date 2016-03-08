@@ -47,7 +47,7 @@ $(document).imagesLoaded(function(){
         h = $('.landing-container').innerHeight(),
         landingBoxH = $('.landing-box').height(),
         landingPadding = ( (h - landingBoxH) / 2 ) + "px",
-        paddingH = (h * 0.225)+"px";
+        paddingH = (h * 0.25)+"px";
    
     
     $('.landing-box').css('padding-top',landingPadding);
@@ -165,6 +165,7 @@ $(document).ready(function(){
             myState ++;
         }
         
+        
         var wheretoGo =( "#cut"+ myState),
             $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
         
@@ -172,22 +173,33 @@ $(document).ready(function(){
             scrollTop: $(wheretoGo).offset().top
         }, 700);
         // 如果是cut1則跑
-        if(wheretoGo=="#cut1"){
+        if(wheretoGo=="#cut1" && WindowWidth>776){
             $('.float-items , .go-next').stop().fadeOut(300);
-            $('.top-nav,.pink-btn').delay(300).fadeIn(700);
+            $('.top-nav').delay(300).fadeIn(700);
             $('.cut-content').delay(550).fadeIn(1350);
             setTimeout(boxbox,1350);
             $('.goSubscribe-container').delay(3050).fadeIn(700);
-            $('.go-next').fadeOut(700);
         };
         
+        if(wheretoGo=="#cut1" && WindowWidth<776){
+            $('.float-items , .go-next').stop().fadeOut(300);
+            $('.top-nav,.pink-btn').delay(300).fadeIn(700);
+            $('.cut-content').delay(550).fadeIn(1350);
+        }
+        
+        if(wheretoGo=="#cut2"){
+            $('.pink-btn').fadeOut(700);
+        }
         
     });
     
     $('.goSubscribe-btn').click(function(){
-        $('.cut-content').css('opacity','0');
-        $(this).fadeOut(700);
-       boxContent(); 
+        var w = $(window).width();
+        if(w>776){
+            $('.cut-content').css('opacity','0');
+            $(this).fadeOut(700);
+           boxContent(); 
+        }
     });
 
     // countdown scribe toggle

@@ -222,6 +222,7 @@ input{
 }
 
 .cut-wrapper {
+    padding: 15px;
     padding-top: 200px;
     text-align: center;
     overflow: hidden;
@@ -788,3 +789,9 @@ border-radius: 5px 5px 0 0 ;
 }
 
 
+
+.subscribe-xs-container {
+    background-image: url(../images/mail-phone-01.png);
+    background-size: 100%;
+    width: 100%;
+}
