@@ -130,7 +130,11 @@ function floatReset(){
 $(document).ready(function(){
     $('.gogo-btn').bind('click',function(){
        
-        var menuState = $(this).attr('menuState');
+        var menuState = $(this).attr('menuState'),
+            WindowWidth = $(window).width();
+        
+        
+
         
         if(menuState==1){
             myState = 1

@@ -1,5 +1,5 @@
 // declare weddingdate and data variables
-var weddingDate = new Date("4 24 2016 00:00:00"),
+var weddingDate = new Date("2016-04-24"),
     years, months, days, minutes, seconds,
     //declare Dom position
     countdown = document.getElementsByClassName("integer");

@@ -14,9 +14,6 @@
     <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.js"></script>
     <script src="js/main.js"></script>
     <script src="js/countdown.js"></script>
-    <script>
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
-    </script>
 </head>
 <body>
     <div class="lightbox">
@@ -231,19 +228,29 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="email-alert" colspan="2">
+                                    <td colspan="2">
                                         <input class="input-box input-wrong" type="email" placeholder="輸入您的Email">
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td class="form-alert" style="display:none;" colspan="2">
+                                        <span>＊您輸入的Email是錯誤的格式</span>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td class="check-box">
-                                        <input class="checked" type="checkbox" name="" value=""> 
+                                        <input class="checked input-wrong" type="checkbox" name="" value=""> 
                                         
                                     </td>
                                     <td class="check-box">
                                         <h5 style="margin:0px;">
                                             我已閱讀並同意隱私權條款,提供個人資料參加抽獎,並訂閱驚喜電子報提供出其不意的、神來一筆的、肯定有趣的驚喜資訊。
                                         </h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="display:none;" colspan="2">
+                                        <span>＊請確認您已閱讀隱私同意條款</span>
                                     </td>
                                 </tr>
                                 <tr>

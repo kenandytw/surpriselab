@@ -66,9 +66,86 @@
     }
     
     .nav-logo{
-        width: 170px;
+        width: 190px;
+        float: none;
+    }
+    
+    .about-quote{
+        font-size: 14px;
+        font-weight: bold;
+        background-size: auto 100%;
+        padding: 15px;
+
+    }
+    
+    .nav-logo{
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .top-nav{
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background: rgba(0,0,0,0.6);
+    }
+    
+    .about-us{
+        padding-top: 80px;
+    }
+    
+    .about-main h5{
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 1.5em;
+    }
+    
+    .copyright{
+        float: none;
+        padding: 0px;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+    
+    .team-box{
+        overflow: auto;
+        height: auto;
+        padding: 2em 2.5em;
+    }
+    
+    .team-box h4{
+        margin-top: 25px;
+        margin-bottom: 0px;
+    }
+    
+    .team-box h5{
+        margin: 10px auto 20px;
+    }
+    
+
+    .about-footer {
+        position:static;
+        display:block;
+        text-align:center;
+    }
+
+    .about-footer ul{
+        padding-left: 12px;
+        margin-bottom: -5px;
+    }
+
+    .about-footer ul li{
+        float: none;
+        display: inline-block;
+        padding-bottom: 0px;
+    }
+    
+    .about-quote{
+        margin-bottom: 60px;
     }
 }
+
+
 
 
 
