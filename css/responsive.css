@@ -24,11 +24,10 @@
     
     .float-1 {
         left: 11%;
-        top: -6%;
+        top: -6%!important;
     }
     
     .float-2 {
-        display: none;
         right: 6%;
         top: 0%;
     }
@@ -48,7 +47,7 @@
     }
     .float-6 {
         right: -5%;
-        top: 37%;
+        top: 46%;
     }
     .float-7 {
         left: -3%;
@@ -142,6 +141,61 @@
     
     .about-quote{
         margin-bottom: 60px;
+    }
+    
+    .countdown h1{
+        font-size: 30px;
+        padding: 35px 30px 0px;
+        margin-bottom: 5px;
+    }
+    .countdown h2{
+        font-size: 26px;
+        letter-spacing: 2px;
+    }
+    
+    .countdown h3{
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    
+    .countdown h5{
+        font-size: 14px;
+    }
+    
+    .countdown .date-amount{
+        font-size: 9px;
+    }
+    
+    .countdown .integer{
+        font-size: 3em;
+    }
+    
+    #subscribe-xs{
+        padding: 15px 30px 40px;
+    }
+    
+    .text h1{
+        font-size: 14px;
+    }
+    
+    .text h4{
+        font-size: 14px;
+    }
+    
+    .input-box{
+        max-width: 240px;
+        font-size: 14px;
+    }
+    
+    .xs-ps{
+        font-size: 14px;
+        margin-top: 15px;    
+        line-height: 1.5em;
+        margin-bottom: 40px;
+    }
+    
+    .check-box h5{
+        font-size: 12px;
     }
 }
 

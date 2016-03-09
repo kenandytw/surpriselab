@@ -33,4 +33,8 @@ setInterval(function() {
   countdown[3].innerHTML = hours;
   countdown[4].innerHTML = minutes;
   countdown[5].innerHTML = seconds;
+  countdown[8].innerHTML = days;
+  countdown[9].innerHTML = hours;
+  countdown[10].innerHTML = minutes;
+  countdown[11].innerHTML = seconds;
 }, 1000)
