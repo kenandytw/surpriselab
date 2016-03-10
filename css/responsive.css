@@ -197,6 +197,9 @@
     .check-box h5{
         font-size: 12px;
     }
+    .lock-landing-box{
+        display: block;
+    }
 }
 
 

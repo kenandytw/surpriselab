@@ -195,7 +195,7 @@ $(document).ready(function(){
         };
         
         if(wheretoGo=="#cut1" && WindowWidth<776){
-            $('.lock-landing-box').fadeOut();
+            $('.lock-landing-box').css("display","none");
             $('.float-items , .go-next').stop().fadeOut(300);
             $('.top-nav').delay(300).fadeIn(700);
             $('.cut-content,.mobile-box').delay(550).fadeIn(1350);
