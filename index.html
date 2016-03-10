@@ -5,18 +5,25 @@
     </title>
     <meta charset="utf-8">
     <link rel="icon" href="images/favi.png" >
-
+    <meta name="viewport" content="target-densitydpi=device-dpi; width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     <link rel="stylesheet" href="css/countdown.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     
     <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.js"></script>
+    <script src="js/imagesLoaded.js"></script>
     <script src="js/main.js"></script>
     <script src="js/countdown.js"></script>
 </head>
 <body>
+    <div class="lock-landing-box visible-xs">
+        
+    </div>
+    <div class="next-btn-container">
+        <img rel="1" class="go-next gogo-btn" width="55px" src="images/button.png" alt="">
+        <img rel="2" class="go-next pink-btn gogo-btn" width="55px" src="images/button-pink.png" alt="">
+    </div>
     <div class="lightbox">
 
         <div class="lightbox-container">
@@ -150,10 +157,7 @@
                     Surprise is everywhere.
                 </div>
             </div>
-            <div class="next-btn-container">
-                <img rel="1" class="go-next gogo-btn" width="55px" src="images/button.png" alt="">
-                <img rel="2" class="go-next pink-btn gogo-btn" width="55px" src="images/button-pink.png" alt="">
-            </div>
+            
         </div>
         <div id="cut1" class="cut-wrapper">
             
@@ -170,7 +174,20 @@
                </div>
                 
             </div>
-            <div class="box-box">
+            <div style="top:0px;display:none" class="box-box mobile-box">
+                <div style="top:115px" class="goSubscribe-container">
+                    <div class="goSubscribe-btn gogo-btn" >
+                        open
+                    </div>
+                </div>
+                <div class="left-box rotate-box">
+                    <img style="width:90px" src="images/present-left.png" alt="">
+                </div>
+                <div class="right-box rotate-box">
+                    <img style="width:90px" src="images/present-right.png" alt="">
+                </div>
+            </div>
+            <div class="box-box hidden-xs">
                <div style="display:none" class="goSubscribe-container">
                    <div class="goSubscribe-btn" >
                        open
@@ -252,12 +269,12 @@
                                 </tr>
                                 <tr>
                                     <td class="check-box">
-                                        <input class="checked input-wrong" type="checkbox" name="" value=""> 
+                                        <input class="checked input-wrong" type="checkbox" name="privacy" value=""> 
                                         
                                     </td>
                                     <td class="check-box">
                                         <h5 style="margin:0px;">
-                                            我已閱讀並同意隱私權條款,提供個人資料參加抽獎,並訂閱驚喜電子報提供出其不意的、神來一筆的、肯定有趣的驚喜資訊。
+                                            我已閱讀並同意隱私權條款(提供個人資料參加抽獎,並訂閱驚喜電子報提供出其不意的、神來一筆的、肯定有趣的驚喜資訊。)
                                         </h5>
                                     </td>
                                 </tr>
@@ -282,22 +299,8 @@
                 </div>
             </div>
         </div>
+        
         <div id="cut2" class="cut-wrapper">
-            <div style="top:0px;" class="box-box">
-                <div style="top:115px" class="goSubscribe-container">
-                    <div class="goSubscribe-btn gogo-btn" >
-                        open
-                    </div>
-                </div>
-                <div class="left-box rotate-box">
-                    <img style="width:90px" src="images/present-left.png" alt="">
-                </div>
-                <div class="right-box rotate-box">
-                    <img style="width:90px" src="images/present-right.png" alt="">
-                </div>
-            </div>
-        </div>
-        <div id="cut3" class="cut-wrapper">
             <div class="subscribe-xs-container">
                 <!--  <img class="pig" width="560px" src="images/mail-web-01.png" alt=""> -->
                 <!-- countdown -->
@@ -344,7 +347,7 @@
                 <section id="subscribe-xs">
                     <div class="text">
                         <h1>Dear 驚喜製造</h1>
-                        <h4>本人因具有旺盛的好奇心與玩心,欲攜伴乙位搶先免費 體驗無光晚餐的黑暗魅力,願在零視覺空間中品嘗米其 林星級美食並進行味蕾冒險。</h4>
+                        <h4>本人因具有旺盛的好奇心與玩心,欲攜伴乙位搶先免費 體驗無光晚餐 的黑暗魅力,願在零視覺空間中品嘗米其 林星級美食並進行味蕾冒險。</h4>
                     </div>
                     <div>
                         <table class="input-zone">
@@ -370,7 +373,7 @@
                                 </td>
                                 <td class="check-box">
                                     <h5 style="margin:0px;">
-                                        我已閱讀並同意隱私權條款,提供個人資料參加抽獎,並訂閱驚喜電子報提供出其不意的、神來一筆的、肯定有趣的驚喜資訊。
+                                        我已閱讀並同意隱私權條款(提供個人資料參加抽獎,並訂閱驚喜電子報提供出其不意的、神來一筆的、肯定有趣的驚喜資訊。)
                                     </h5>
                                 </td>
                             </tr>
@@ -397,13 +400,14 @@
                                 <a target="_blank" href="about.html"><img width="<100%></100%>" src="images/phoneicon-about.png" alt=""></a>
                             </div>
                             <div class="col-xs-4">
-                                <a target="_blank" href="#"><img src="images/phoneicon-fb.png" alt=""></a>
+                                <a target="_blank" href="https://www.facebook.com/surpriselabtw/"><img src="images/phoneicon-fb.png" alt=""></a>
                             </div>
                             <div class="col-xs-4">
-                                <a target="_blank" href="#"><img src="images/phoneicon-ig.png" alt=""></a>
+                                <a target="_blank" href="https://www.instagram.com/surpriselabtw/
+                                                         email"><img src="images/phoneicon-ig.png" alt=""></a>
                             </div>
                             <div class="col-xs-4">
-                                <a target="_blank" href="#"><img src="images/phoneicon-email.png" alt=""></a>
+                                <a target="_blank" href="mailto:service@surpriselab.com.tw"><img src="images/phoneicon-email.png" alt=""></a>
                             </div>
                         </div>
                         <h5 style="color:#777" class="copyright">
@@ -422,13 +426,14 @@
                <a target="_blank" href="about.html"><img src="images/more-about-us.png" alt=""></a>
            </li>
            <li>
-               <a target="_blank" href="#"><img src="images/fb-icon.png" alt=""></a>
+               <a target="_blank" href="https://www.facebook.com/surpriselabtw/"><img src="images/fb-icon.png" alt=""></a>
            </li>
             <li>
-                <a target="_blank" href="#"><img src="images/instagram-icon.png" alt=""></a>
+                <a target="_blank" href="https://www.instagram.com/surpriselabtw/
+                                         email"><img src="images/instagram-icon.png" alt=""></a>
             </li>
             <li>
-                <a target="_blank" href="#"><img src="images/email-icon.png" alt=""></a>
+                <a href="mailto:service@surpriselab.com.tw"><img src="images/email-icon.png" alt=""></a>
             </li>
         </ul>
         <div class="copyright">
