@@ -8,6 +8,7 @@ body {
 .countdown {
   max-width: 470px;
   margin: 0 auto;
+    padding-top: 1px;
 }
 .countdown h1 {
   padding: 70px 0 10px;

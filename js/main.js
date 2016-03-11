@@ -283,7 +283,7 @@ function boxbox(){
 function boxContent(){
     $('.left-box').addClass("rotate-left"); 
     $('.right-box').addClass("rotate-right");
-    $('.subscribe-container').css('opacity',1);
+    $('.subscribe-box').css('opacity',1);
     $('.box-box-position').css('top','0px');
     setTimeout(light,1000);
 }
@@ -294,7 +294,7 @@ function light(){
 }
 
 function pig(){
-    $('.subscribe-container').css('bottom','-15px');
+    $('.subscribe-box').css('bottom','0px');
 }
 
 
