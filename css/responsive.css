@@ -213,6 +213,18 @@
     .team-container{
         padding-bottom: 20px;
     }
+    
+    .about-main{
+        font-size: 14px;
+    }
+    
+    .team-box{
+        padding: 25px 5px 15px;
+    }
+    
+    .team-box p{
+        margin-bottom: 25px;
+    }
 }
 
 

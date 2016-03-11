@@ -258,6 +258,10 @@ $(document).ready(function(){
             $('.lightbox').fadeToggle(700); 
             $('body').toggleClass('unscroll');
         }
+        if ($("input[name='privacy-mobile']").is(":checked")){
+            $('.lightbox').fadeToggle(700); 
+
+        }
     });
 
 
