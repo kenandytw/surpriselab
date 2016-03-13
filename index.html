@@ -15,9 +15,19 @@
     <script src="js/imagesLoaded.js"></script>
     <script src="js/main.js"></script>
     <script src="js/countdown.js"></script>
+    
+    <link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.min.css">
+    
 </head>
 <body>
-   
+
+    <!-- dialog -->
+    <div title="訂閱成功！" id="dialog">
+        我們將於4月24日於驚喜製造FB粉絲頁公布獲選名單，並以官方email通知中獎人。
+        <br>
+        service@surpriselab.com.tw
+    </div>
+    
     <!-- lock scrolling box -->
     <div class="lock-landing-box">
         
@@ -462,6 +472,15 @@
             Copyright ©驚喜製造
         </div>
     </div>
+    
+    <!-- jq ui 1.11.4 -->
+    <script src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $( "#dialog" ).dialog();
+        });
+    </script>
+    <!-- -->
     
 </body>
 
